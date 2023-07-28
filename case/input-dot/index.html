@@ -9,21 +9,16 @@
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
- </head>
+</head>
+
+<script>
+    throw new Error("test error thrown")
+</script>
 
 <body>
 
-    <a href="case/accessibility-origin/">accessibility-origin</a>
-    <br />
-    
-    <a href="case/accessibility-iframe/">accessibility-iframe</a>
-    <br />
-
-    <a href="case/js-error/">js-error</a>
-    <br />
-
-    <a href="case/input-dot/">input-dot</a>
-    <br />
+    <input type="text" id="first" value="#first" />
+    <input type="text" id="second.dot" value="#second.dot" />
 
 </body>
 
