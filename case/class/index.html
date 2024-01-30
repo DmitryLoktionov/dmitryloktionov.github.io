@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Static page</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div id="divClass">Class will appear</div>
+    <div id="counter"></div>
+    <div id="message"></div>
+
+    <script>
+        var counter = 360;
+        var counterElement = document.getElementById('counter');
+        var messageElement = document.getElementById('message');
+
+        var intervalId = setInterval(function() {
+            counterElement.textContent = 'Seconds remaining: ' + counter;
+            counter--;
+            if (counter < 0) {
+                clearInterval(intervalId);
+            }
+        }, 1000);
+
+        setTimeout(function() {
+            document.getElementById('divClass').className = 'some-class';
+            messageElement.textContent = 'Class assigned';
+        }, (counter + 1) * 1000);
+    </script>
+</body>
+</html>
